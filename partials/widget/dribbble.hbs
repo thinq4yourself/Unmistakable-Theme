@@ -1,0 +1,18 @@
+<div class="widget dribbble{{#unless widget_title}} no-title{{/unless}}{{#if custom_class}} {{custom_class}}{{/if}}">
+	{{#if widget_title}}
+	<h3 class="widget-title">{{{widget_title}}}</h3>
+	{{/if}}
+	<div class="widget-content">
+		<ul class="dribbble-feed" data-userid="{{user_name}}" data-mode="gallery" data-display="{{display}}" data-cols="{{cols}}" data-popup-preview="{{popup_preview}}">
+		</ul>
+		{{#if show_follow_box}}
+		<a class="follow-box dribbble" href="https://dribbble.com/{{user_name}}" target="_blank">
+			{{#if follow_box_text}}
+				{{follow_box_text}}
+			{{else}}
+				Follow on Dribbble
+			{{/if}}
+		</a>
+		{{/if}}
+	</div>
+</div>

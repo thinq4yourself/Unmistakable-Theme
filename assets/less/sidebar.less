@@ -1,0 +1,49 @@
+.sidebar{
+	.sidebar-wrap{		
+		.widget{			
+			border: solid 1px @gray-color;			
+			color: @sidebar-widget-content-color;
+			background-color: @sidebar-widget-background;	
+			body[data-border-pattern="dashed"] &{
+                border-style: dashed;
+            }
+			body[data-border-pattern="none"] &{
+                border: 0;
+            }			
+            &.full-box{			
+				border-width: 0;
+			}
+			&:last-of-type{
+				margin-bottom: 0;
+			}
+			.widget-title{
+				color: @sidebar-widget-title-color;
+			}
+			&:before{				
+				border-color: @gray-color;		
+			}
+			&.about{
+				.widget-title{
+					display: none;
+				}
+				.about-container{
+					text-align: center;
+					.avatar{
+						float: none;
+						display: inline-block;
+						margin: 0 auto;
+						width: 100px;
+					}
+					.desc{
+						.author-name{
+							font-weight: 700;
+						}
+					}
+				}
+			}
+			&.facebook-like{
+				padding-bottom: ( @spacing - 10 );
+			}
+		}
+	}
+}

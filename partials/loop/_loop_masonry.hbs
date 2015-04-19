@@ -1,0 +1,59 @@
+{{#contentFor "customBodyClass"}}sf-masonry{{/contentFor}}
+<div class="row">
+	<div class="post-list">
+		{{#foreach posts}}		
+		<div class="masonry-item {{../item_class}}">	
+			<div class="{{post_class}} {{#if image}}has-cover{{/if}}" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+				<div class="post-inner">
+					<div class="post-header">         
+			            <div class="header-wrap">	            		            		            	
+			            	<div class="post-cover">
+			            		{{#if image}}
+			            		<img src="{{image}}" alt="{{{title}}}" class="img-responsive"/>	            		            		            	
+			            		{{/if}}
+			            		<div class="temp-cover">
+						            {{content words="0"}}
+						        </div>
+						        <a class="cover-action" href="javascript:;"></a>
+			            	</div>	            	
+			            	<div class="top-area">
+			            		<div class="top-area-wrap">
+					            	{{#if tags}}
+				                    <div class="post-tags">{{tags separator=" + "}}</div>
+				                    {{/if}}
+					                <h2 class="post-title" itemprop="name">
+					                    <a href="{{url}}" itemprop="url">{{{title}}}</a>
+					                </h2>
+					            </div>
+				            </div>
+			                <div class="post-desc">
+			                	<p itemprop="description">
+			                    	{{excerpt words="20"}}
+			                    </p>
+			                    <div class="read-more">
+				                    <a href="{{url}}">                            
+				                        Read More + 
+				                    </a>
+				               	</div>
+			                </div>
+			                <div class="post-meta">
+			                	<span>
+			                		<time datetime="{{date published_at format="YYYY-MM-DD"}}" itemprop="datePublished"> {{date published_at}} </time>
+			                	</span>
+			                	<div class="share-box circle main-color">
+		                        	{{>misc/share-icons}}
+		                        </div>	                	
+				            </div>
+			            </div>
+			        </div>				
+				</div>
+			</div>
+		</div>			
+		{{/foreach}}
+	</div>
+</div>
+{{#if pagination}}
+<div class="pagination-wrap">
+    {{pagination}}  
+</div>
+{{/if}}

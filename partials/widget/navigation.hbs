@@ -1,0 +1,14 @@
+<div class="widget navigation{{#unless widget_title}} no-title{{/unless}}{{#if custom_class}} {{custom_class}}{{/if}}">
+	{{#if widget_title}}
+	<h3 class="widget-title">{{{widget_title}}}</h3>
+	{{/if}}
+	<div class="widget-content">
+		<ul class="sf-nav-widget">
+			{{#if @blog.navigation}}
+				{{navigation}}
+			{{else}}
+				{{>misc/menu-items}}
+			{{/if}}
+		</ul>
+	</div>
+</div>

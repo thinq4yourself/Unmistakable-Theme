@@ -1,0 +1,44 @@
+<div class="banner">
+	<div class="banner-wrap">
+		<div class="banner-inner">
+			<div class="banner-content">
+				<div class="banner-content-inner clearfix">
+					<div class="welcome-text">
+						<h1>{{author.name}}</h1>
+						<h3>						
+						{{#if author.bio}}
+							{{author.bio}}
+                		{{else}}
+							{{plural pagination.total empty='No Post' singular='Discover % Post' plural='Discover % Posts'}} by &#8220;{{author.name}}&#8221; Author.
+						{{/if}}						
+						</h3>	
+						<div class="circle main-color">				
+							{{> misc/social-icons}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	{{#if author.cover}}
+	<div class="background" style="background-image: url({{author.cover}});"
+		data-bottom-top="transform: translate3d(0px,-200px, 0px);"
+		data-top-bottom="transform: translate3d(0px,200px, 0px);"
+		data-center="transform: translate3d(0px,0px, 0px);">
+	</div>
+	{{else}}
+		{{#if @blog.cover}}
+		<div class="background" style="background-image: url({{@blog.cover}});"
+			data-bottom-top="transform: translate3d(0px,-200px, 0px);"
+			data-top-bottom="transform: translate3d(0px,200px, 0px);"
+			data-center="transform: translate3d(0px,0px, 0px);">
+		</div>
+		{{/if}}
+	{{/if}}
+	<div class="more-detail">
+		<div class="scrollDown">
+			<span class="mouseBorder"></span>
+		    <span class="mouseWheel"></span>
+		</div>
+	</div>
+</div>

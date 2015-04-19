@@ -1,0 +1,60 @@
+{{!< default}}
+{{#post}}
+{{#has tag="_full_cover"}}
+	{{#contentFor "customBodyClass"}}full-cover{{/contentFor}}
+	{{>banner/page}}
+{{/has}}
+<div class="main-wrap"> 
+	<div class="row">		       
+	    <div class="main-content {{^has tag="_full_width,_left_sidebar,_both_sidebar"}}col-md-8 right-sidebar{{else}}{{#has tag="_both_sidebar"}}col-md-6 col-md-push-3 both-sidebar{{else}}{{#has tag="_left_sidebar"}}col-md-8 col-md-push-4 left-sidebar{{else}}col-md-10 col-md-push-1 full-width{{/has}}{{/has}}{{/has}}">
+	        <div class="body-content" role="main">
+	        	<div class="post-content {{post_class}} {{^has tag="_full_cover"}}{{#if image}}has-cover{{/if}}{{/has}}">
+	        		<div class="post-inner">		      
+	        			{{^has tag="_full_cover"}}
+						<div class="post-header">         
+				            <div class="header-wrap">				            		            	
+				            	{{#if image}}	            	
+				            	<div class="post-cover">
+				            		<img src="{{image}}" alt="{{{title}}}" class="img-responsive"/>	            		            		            	
+				            	</div>
+				            	{{/if}}					            
+				            	<div class="top-area">
+				            		<div class="top-area-wrap">						            	
+						                <h1 itemprop="name headline" class="post-title">
+						                    {{{title}}}
+						                </h1>
+						            </div>
+					            </div>
+					        </div>
+					    </div>
+				    	{{/has}}  		
+		        		<div class="content-area">
+		        			{{content}}
+		        		</div>
+			        </div>
+	        	</div>               
+	        </div>
+	    </div>
+	    {{^has tag="_full_width,_left_sidebar,_both_sidebar"}}	    	    
+		<div class="col-md-4 sidebar right-sidebar">
+			{{>sidebar/default}} 
+		</div>
+	    {{else}}
+		{{#has tag="_both_sidebar"}}				
+		<div class="col-md-3 col-md-pull-6 sidebar left-sidebar">
+			{{>sidebar/left}} 
+		</div>
+		<div class="col-md-3 sidebar right-sidebar">
+			{{>sidebar/default}} 
+		</div>
+		{{else}}
+		{{#has tag="_left_sidebar"}}
+			<div class="sidebar col-md-4 col-md-pull-8 left-sidebar">
+				{{>sidebar/default}} 
+			</div>				
+		{{/has}}
+		{{/has}}
+	    {{/has}}
+	</div>
+</div>
+{{/post}}

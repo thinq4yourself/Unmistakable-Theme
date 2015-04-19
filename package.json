@@ -1,0 +1,32 @@
+{
+  "name": "Unmistakable-Theme",
+  "version": "1.0.7",
+  "description": "Unmistakable Blog Theme - A Badass Content-Focused Theme",
+  "url": "http://unmistakable.us",
+  "author": {
+    "name": "Unmistakable Travels",
+    "email": "hello@unmistakable.us",
+    "url": "http://unmistakable.us"
+  },
+  "dependencies": {
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-cli": "~0.1.11",
+    "grunt": "~0.4.2",
+    "grunt-csso": "~0.5.0",
+    "less": "~1.5.1",
+    "grunt-ez-frontend": "~0.2.2",
+    "grunt-autoprefixer": "~0.4.1",
+    "grunt-frontend": "~2.0.3",
+    "grunt-contrib-less": "~0.8.2",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-imagemin": "~0.5.0"
+  },
+  "engine": "node >= 0.10.1",
+  "devDependencies": {
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-less": "~0.8.2",
+    "grunt-contrib-compress": "~0.13.0",
+    "grunt-responsive-images": "~0.1.1",
+    "grunt-bump": "~0.3.0"
+  }
+}

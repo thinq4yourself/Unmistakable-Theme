@@ -1,0 +1,16 @@
+<div class="widget tag-widget{{#unless widget_title}} no-title{{/unless}}{{#if custom_class}} {{custom_class}}{{/if}}">
+	{{#if widget_title}}
+	<h3 class="widget-title">{{{widget_title}}}</h3>
+	{{/if}}
+	<div class="widget-content">
+		<div class="sf-tags {{# if style}}{{style}}{{else}}stack{{/if}}" data-max-items="{{max_items}}" data-show-count="{{show_count}}">			
+			<div class="sf-loading">
+				<div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+			</div>
+		</div>
+	</div>
+</div>

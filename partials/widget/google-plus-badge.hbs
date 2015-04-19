@@ -1,0 +1,24 @@
+<div class="widget google-plus-badge{{#unless widget_title}} no-title{{/unless}}{{#if custom_class}} {{custom_class}}{{/if}}">
+	{{#if widget_title}}
+	<h3 class="widget-title">{{{widget_title}}}</h3>
+	{{/if}}
+	<div class="widget-content">
+		{{#if gpage_url}}		
+			<div class="g-page" data-width="260" data-href="{{gpage_url}}" data-rel="publisher"></div>			
+			<script type="text/javascript">
+			  (function() {
+			    var po = document.createElement('script');
+			    po.type = 'text/javascript';
+			    po.async = true;
+			    po.src = 'https://apis.google.com/js/platform.js';
+			    var s = document.getElementsByTagName('script')[0];
+			    s.parentNode.insertBefore(po, s);
+			  })();
+			</script>
+		{{else}}
+			<p>
+				Please enter value for gpage_url option to use this widget.
+			</p>
+		{{/if}}				
+	</div>
+</div>

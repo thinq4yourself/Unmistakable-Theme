@@ -1,0 +1,26 @@
+<div class="banner">
+	<div class="banner-wrap">
+		<div class="banner-inner">
+			<div class="banner-content">
+				<div class="banner-content-inner clearfix">
+					<div class="welcome-text">																	
+						<h1>{{{title}}}</h1>		
+					</div>									
+				</div>
+			</div>
+		</div>
+	</div>
+	{{#if image}}
+	<div class="background" style="background-image: url({{image}});"
+		data-bottom-top="transform: translate3d(0px,-200px, 0px);"
+		data-top-bottom="transform: translate3d(0px,200px, 0px);"
+		data-center="transform: translate3d(0px,0px, 0px);">
+	</div>
+	{{/if}}
+	<div class="more-detail">
+		<div class="scrollDown">
+			<span class="mouseBorder"></span>
+		    <span class="mouseWheel"></span>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,113 @@
+{{!< default}}
+{{#post}}
+{{#if featured}}
+	{{#contentFor "customBodyClass"}}full-cover{{/contentFor}}
+	{{>banner/post}}
+{{else}}
+	{{#has tag="_full_cover"}}
+		{{#contentFor "customBodyClass"}}full-cover{{/contentFor}}
+		{{>banner/post}}
+	{{/has}}
+{{/if}}
+<div class="main-wrap"> 
+	<div class="row">		       
+	    <div class="main-content {{^has tag="_full_width,_left_sidebar,_both_sidebar"}}col-md-8 right-sidebar{{else}}{{#has tag="_both_sidebar"}}col-md-6 col-md-push-3 both-sidebar{{else}}{{#has tag="_left_sidebar"}}col-md-8 col-md-push-4 left-sidebar{{else}}col-md-10 col-md-push-1 full-width{{/has}}{{/has}}{{/has}}">
+	        <div class="body-content" role="main">
+	        	<div itemscope itemtype="http://schema.org/BlogPosting" role="article" class="post-content {{post_class}} {{^if featured}}{{^has tag="_full_cover"}}{{#if image}}has-cover{{/if}}{{/has}}{{/if}}">	       
+	        		<div class="post-inner">
+	        			{{#unless featured}}
+	        				{{^has tag="_full_cover"}}
+							<div class="post-header">         
+					            <div class="header-wrap">				            		            	
+					            	<div class="post-cover">
+						            	{{#if image}}	            						            	
+						            		<img src="{{image}}" alt="{{{title}}}" class="img-responsive"/>	            		            		            	
+						            	{{/if}}				
+						            	<div class="temp-cover">
+								            {{content words="0"}}
+								        </div>
+								        <a class="cover-action" href="javascript:;"></a>	        
+					            	</div>    
+					            	<div class="top-area">
+					            		<div class="top-area-wrap">						            	
+							                <h1 itemprop="name headline" class="post-title">
+							                    {{{title}}}
+							                </h1>
+							            </div>
+						            </div>
+						        </div>
+						    </div>
+					    	{{/has}}
+					    {{/unless}}
+		                <div class="content-area">		                	
+		                	{{content}}	
+		                	{{#if tags}}
+		                    <div class="post-tags">
+		                    	 <i class="fa fa-tags"></i> {{tags separator=" "}}
+		                    </div>
+		                    {{/if}}
+		                	<div class="post-meta">
+			                	<span>
+			                		<time datetime="{{date published_at format="YYYY-MM-DD"}}" itemprop="datePublished"> {{date published_at}} </time>
+			                	</span>
+			                	<div class="share-box circle main-color">
+		                        	{{>misc/share-icons}}
+		                        </div>	                	
+				            </div>
+		                	{{#author}}	
+							<footer class="post-footer clearfix">              	            
+				                <div  itemprop="author" itemscope itemtype="http://schema.org/Person" class="post-author">
+				                    {{#if image}}                    
+				                    <div class="avatar">
+				                        <img class="img-reponsive" itemprop="image" src="{{image}}" alt="{{name}}" />
+				                    </div>
+				                    {{/if}}
+				                    <div class="post-author-content">
+					                    <h4 class="author-name">
+					                    	Written by <a href="{{url}}" itemprop="url" class="post-author-name"><span itemprop="name">{{name}}</span></a>
+					                    </h4>	                    
+					                    <div class="author-info">
+					                    	{{#if location}}<i class="fa fa-home"></i> <span>{{location}}</span>{{/if}}
+					                    	{{#if website}}<i class="fa fa-globe"></i> <a href="{{website}}">{{website}}</a>{{/if}}
+					                    </div>	                                        
+					                    <p itemprop="description">
+					                    	{{#if bio}}
+					                        	{{bio}}
+					                        {{else}}
+					                        	The author didnt add any Information to his profile yet
+					                        {{/if}}                    	
+					                    </p>
+				                    </div>
+				                </div>	            
+					        </footer>
+					        {{/author}}
+					        {{>misc/next-prev-posts}}
+		        			{{>misc/comment}}
+		                </div>				
+					</div> 			        		
+	        	</div>               
+	        </div>
+	    </div>
+	    {{^has tag="_full_width,_left_sidebar,_both_sidebar"}}	    	    
+		<div class="col-md-4 sidebar right-sidebar">
+			{{>sidebar/default}} 
+		</div>
+	    {{else}}
+		{{#has tag="_both_sidebar"}}				
+		<div class="col-md-3 col-md-pull-6 sidebar left-sidebar">
+			{{>sidebar/left}} 
+		</div>
+		<div class="col-md-3 sidebar right-sidebar">
+			{{>sidebar/default}} 
+		</div>
+		{{else}}
+		{{#has tag="_left_sidebar"}}
+			<div class="sidebar col-md-4 col-md-pull-8 left-sidebar">
+				{{>sidebar/default}} 
+			</div>				
+		{{/has}}
+		{{/has}}
+	    {{/has}}
+	</div>
+</div>
+{{/post}}

@@ -1,0 +1,20 @@
+<div class="widget search-widget{{#unless widget_title}} no-title{{/unless}}{{#if custom_class}} {{custom_class}}{{/if}}">
+	{{#if widget_title}}
+	<h3 class="widget-title">{{{widget_title}}}</h3>
+	{{/if}}
+	<div class="widget-content">
+		<div class="sf-search-widget">
+			<div class="form-group">
+				<input type="search" name="search-keyword-widget" class="search-keyword-widget" placeholder="Type and hit enter!"/>
+				<span class="icon sf-widget-search-icon">
+	                <i class="fa fa-search"></i>
+	            </span> 
+	        </div>
+	        <div class="search-result-widget-wrap">
+				<div class="search-result-widget-inner">
+					<ul class="search-result-widget"></ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

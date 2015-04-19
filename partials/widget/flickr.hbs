@@ -1,0 +1,9 @@
+<div class="widget flickr-widget{{#unless widget_title}} no-title{{/unless}}{{#if custom_class}} {{custom_class}}{{/if}}">
+	{{#if widget_title}}
+	<h3 class="widget-title">{{{widget_title}}}</h3>
+	{{/if}}
+	<div class="widget-content">
+		<ul class="flickr-feed" data-user-id="{{user_id}}" data-mode="gallery" data-size="{{display}}" data-cols="{{cols}}" data-popup-preview="{{popup_preview}}">
+		</ul>
+	</div>
+</div>

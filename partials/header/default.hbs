@@ -1,0 +1,63 @@
+<div class="sf-top-bar">
+	<div class="top-bar-wrap">
+		<div class="sticker-container">
+			<div class="sf-sticker">
+				<div id="sf-sticker-content">
+
+				</div>
+			</div>
+		</div>
+		<div class="social-container">
+			<div class="no-border light-color">
+				{{> misc/social-icons}}
+			</div>
+		</div>
+	</div>
+</div>
+<div class="sf-header">
+	<div class="header-wrap">
+		<div class="logo-container">
+			{{#if @blog.logo}}
+				<a class="logo" href="{{@blog.url}}">
+					<img class="default" src="{{@blog.logo}}" alt="{{@blog.title}}" title="{{@blog.title}}"/>
+					<img class="alt" src="{{asset "img/unmistakable-travels-logo-alt.png"}}" alt="{{@blog.title}}" title="{{@blog.title}}"/>
+				</a>
+			{{else}}
+				<a class="logo text" href="{{@blog.url}}">{{@blog.title}}</a>
+			{{/if}}
+		</div>
+		<div class="addition-container">
+			<div class="sf-search-button">
+				<i class="fa fa-search"></i>
+				<div class="sf-search-container">
+					<div class="sf-search-container-inner">
+						<span class="arrow"></span>
+						<div class="search-container-wrap">
+							<input type="search" name="search-keyword" id="search-keyword" placeholder="Type and hit enter!"/>
+							<div class="search-result-wrap">
+								<div class="search-result-inner">
+									<ul class="search-result"></ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a class="mobile-nav-button" href="javascript:;">
+				<span>&nbsp;</span>			
+			</a>
+		</div>
+		<div class="nav-container">		
+			<div class="sf-nav-wrap">		
+				<span class="arrow"></span>
+				<ul class="sf-nav">
+					{{#if @blog.navigation}}
+						{{navigation}}
+					{{else}}
+						{{>misc/menu-items}}
+					{{/if}}
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

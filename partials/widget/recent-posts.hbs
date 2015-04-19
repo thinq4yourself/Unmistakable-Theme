@@ -1,0 +1,9 @@
+<div class="widget recent-posts-widget{{#unless widget_title}} no-title{{/unless}}{{#if custom_class}} {{custom_class}}{{/if}}">
+	{{#if widget_title}}
+	<h3 class="widget-title">{{{widget_title}}}</h3>
+	{{/if}}	
+	<div class="widget-content">
+		<div class="recent-posts" data-size="{{display}}" data-desc="{{show_desc}}" data-pubdate="{{show_pubdate}}" data-character-limit="{{desc_limit}}">
+		</div>
+	</div>
+</div>
