@@ -58,7 +58,7 @@
                 &:after{
                     content: '\f0b2';
                     font-family:'FontAwesome';
-                    font-size: 14px;
+                    font-size: 15px;
                     color: @light-color;
                     text-align: center;
                     top: 17px;
@@ -90,7 +90,17 @@
                     &:after{
                         content: '\f04b';
                         margin-left: 3px;
+						color: @red;
                     }
+					&:before{
+						background-color: fade( @light-color, 35% );
+					}
+					&:hover{
+						background-color: @indian-red;
+						&:after{
+                        	color: @light-color;
+                    	}
+					}
                     &.playing{
                         &:after{
                             content: '\f04c';
@@ -380,9 +390,8 @@
             margin-bottom: 30px;
         }
         a{
-            color: @main-color;
             text-decoration: none;
-            border-bottom: 1px solid @gray-color; 
+            border-bottom: 1px solid transparent; 
             &:hover,
             &:focus{
                 border-bottom-color: @main-color;

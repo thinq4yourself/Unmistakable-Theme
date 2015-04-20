@@ -6,7 +6,7 @@ body {
   font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
   color: #20252b;
   background-color: #e2e7ea;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 28px;
   font-weight: 400;
   letter-spacing: 0.01rem;
@@ -164,7 +164,7 @@ a {
   height: 100%;
   vertical-align: top;
   line-height: 1;
-  font-size: 14px;
+  font-size: 15px;
   padding-top: 8px;
   position: relative;
   border: 0;
@@ -1005,6 +1005,9 @@ body[data-header-layout="center"] .sf-nav-wrap {
   background-color: transparent;
   /* Level 1 */
 }
+.sf-nav-wrap .sf-nav .count {
+  display: none;
+}
 .sf-nav-wrap .sf-nav > li {
   list-style: none;
   display: inline-block;
@@ -1086,7 +1089,7 @@ body[data-header-color="main-color"] .sf-nav-wrap .sf-nav > li > a:after {
   position: absolute;
   right: 15px;
   top: 50%;
-  margin-top: -7px;
+  margin-top: -9px;
 }
 .sf-nav-wrap .sf-nav > li.has-children.open > a:after {
   content: "-";
@@ -1331,7 +1334,7 @@ body[data-header-color="main-color"] .sf-nav-wrap .sf-nav > li > ul > li > a:aft
   right: 15px;
   top: 50%;
   color: #bbbbbb;
-  margin-top: -7px;
+  margin-top: -9px;
 }
 .sf-nav-wrap .sf-nav > li > ul > li.has-children.open > a:after {
   content: "-";
@@ -1511,6 +1514,16 @@ body[data-header-color="main-color"] .sf-nav-wrap .sf-nav > li > ul > li > ul > 
 body[data-header-color="main-color"] .sf-nav-wrap .sf-nav > li > ul > li > ul > li:hover > a {
   color: #0d98e1;
   background-color: #bbbbbb;
+}
+.sf-nav-wrap .sf-nav .external {
+  padding-right: 35px;
+}
+.sf-nav-wrap .sf-nav .external:after {
+  content: "»";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -12px;
 }
 /* Header Addition area */
 .addition-container {
@@ -2478,7 +2491,7 @@ body[data-border-pattern="dashed"] .post .post-inner .post-cover .cover-action {
 .post .post-inner .post-cover .cover-action:after {
   content: '\f0b2';
   font-family: 'FontAwesome';
-  font-size: 14px;
+  font-size: 15px;
   color: #ffffff;
   text-align: center;
   top: 17px;
@@ -2518,6 +2531,19 @@ body[data-border-pattern="dashed"] .post .post-inner .post-cover .cover-action {
 .post .post-inner .post-cover .cover-action.audio:after {
   content: '\f04b';
   margin-left: 3px;
+  color: #cd1231;
+}
+.post .post-inner .post-cover .cover-action.video:before,
+.post .post-inner .post-cover .cover-action.audio:before {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+.post .post-inner .post-cover .cover-action.video:hover,
+.post .post-inner .post-cover .cover-action.audio:hover {
+  background-color: #cd5c5c;
+}
+.post .post-inner .post-cover .cover-action.video:hover:after,
+.post .post-inner .post-cover .cover-action.audio:hover:after {
+  color: #ffffff;
 }
 .post .post-inner .post-cover .cover-action.video.playing:after,
 .post .post-inner .post-cover .cover-action.audio.playing:after {
@@ -2815,9 +2841,8 @@ body[data-border-pattern="dashed"] .post-content .post-inner .post-meta {
   margin-bottom: 30px;
 }
 .post-content .content-area a {
-  color: #0d98e1;
   text-decoration: none;
-  border-bottom: 1px solid #bbbbbb;
+  border-bottom: 1px solid transparent;
 }
 .post-content .content-area a:hover,
 .post-content .content-area a:focus {
@@ -3497,9 +3522,10 @@ body[data-border-pattern="dashed"] .widget .sf-tags.stack ul li a {
   box-shadow: none;
   background-color: #ffffff;
   border-color: #bbbbbb;
+  border-bottom: 2px solid;
 }
 .widget .form-container .form-control:focus {
-  border-color: #4C5055;
+  border-color: #0d98e1;
 }
 .widget .form-container .btn-theme {
   -webkit-transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -4319,6 +4345,13 @@ body[data-footer-color="dark"] .footer .bottom-area .bottom-area-wrap .sf-social
   body[data-header-sticky="true"][data-show-top-bar="true"] .sf-header {
     padding-top: 68px;
   }
+  .sf-header .logo-container .logo.text {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .sf-header .logo-container .logo img {
+    max-width: 220px;
+  }
   body[data-show-top-bar="true"] .sf-nav-wrap {
     top: 125px;
   }
@@ -4399,9 +4432,8 @@ body[data-footer-color="dark"] .footer .bottom-area .bottom-area-wrap .sf-social
   body[data-header-sticky="true"][data-header-layout="center"][data-show-top-bar="true"] .sf-header {
     padding-top: 68px;
   }
-  .sf-header .logo-container .logo.text {
-    font-size: 28px;
-    line-height: 36px;
+  .sf-header .logo-container .logo img {
+    max-width: 220px;
   }
   .sf-nav-wrap {
     right: 20px;

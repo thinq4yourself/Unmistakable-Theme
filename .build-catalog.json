@@ -1,7 +1,7 @@
 {
 	"/home/codio/workspace/custom-theme/unmistakable/assets/js/main.min.js": {
-		"hash": "73f0572",
-		"date": "20150418224820",
+		"hash": "7c74f3ba",
+		"date": "20150420160214",
 		"versioned": "/home/codio/workspace/custom-theme/unmistakable/assets/js/main.min.js",
 		"files": [
 			{
@@ -96,14 +96,14 @@
 			},
 			{
 				"file": "/home/codio/workspace/custom-theme/unmistakable/assets/js/script.js",
-				"hash": "89fd80c",
+				"hash": "1601e721",
 				"versioned": "/home/codio/workspace/custom-theme/unmistakable/assets/js/script.js"
 			}
 		]
 	},
 	"/home/codio/workspace/custom-theme/unmistakable/assets/css/style.min.css": {
-		"hash": "3680767e",
-		"date": "20150418224822",
+		"hash": "1aa8a355",
+		"date": "20150420160217",
 		"versioned": "/home/codio/workspace/custom-theme/unmistakable/assets/css/style.min.css",
 		"files": [
 			{
@@ -138,7 +138,7 @@
 			},
 			{
 				"file": "/home/codio/workspace/custom-theme/unmistakable/assets/css/style.css",
-				"hash": "329f03bd",
+				"hash": "2ca7f22a",
 				"versioned": "/home/codio/workspace/custom-theme/unmistakable/assets/css/style.css"
 			}
 		]

@@ -102,7 +102,8 @@ module.exports = function(grunt) {
                 src: ['../../content/themes/unmistakable/**']
             }
         },
-        bump: {
+        // For examples, see https://www.npmjs.com/package/grunt-bump
+		bump: {
             options: {
                 files: ['package.json'],
                 updateConfigs: [],
@@ -123,5 +124,6 @@ module.exports = function(grunt) {
     grunt.registerTask('refresh', ['clean:built']);
     grunt.registerTask('deploy', ['copyto:theme']);
     grunt.registerTask('release', ['compress:release']);
-    grunt.registerTask('beep', ['bump']);
+    // bump:patch, bump:minor, bump:major, bump:prepatch, bump:prerelease, bump:preminor, bump:premajor
+	grunt.registerTask('beep', ['bump']);
 };

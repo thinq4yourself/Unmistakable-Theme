@@ -429,7 +429,8 @@
     .sf-nav {
         padding: 0;
         margin: 0;
-        background-color: transparent;        
+        background-color: transparent;  
+		.count {display: none;}
         /* Level 1 */
         & > li {
             list-style: none;
@@ -500,7 +501,7 @@
                         position: absolute;
                         right: 15px;
                         top: 50%;                
-                        margin-top: -7px;    
+                        margin-top: -9px;    
                     }
                 }
                 &.open{
@@ -511,7 +512,7 @@
                     }
                 }
             }
-            &.active,      
+			&.active,      
             &:hover{
                 border-top-color: @main-color;                
                 border-bottom-color: @main-color; 
@@ -678,7 +679,7 @@
                                 right: 15px;
                                 top: 50%;
                                 color: @gray-color;
-                                margin-top: -7px;
+                                margin-top: -9px;
                             } 
                         }   
                         &.open{
@@ -830,7 +831,18 @@
                 }
             }
         }                       
-    }
+            		.external{
+                    		padding-right: 35px;                      
+                    	&:after {
+                        	content: "»";                        
+                        	position: absolute;
+                        	right: 15px;
+                        	top: 50%;                
+                        	margin-top: -12px;    
+                    	}
+                	}
+
+	}
 }
 
 /* Header Addition area */

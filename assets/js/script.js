@@ -1550,8 +1550,8 @@ var sfApp={
     			items = $(element).data('max-items');
     		}
     		var count = 0;
-    		if(! $(element).data('show-count') ){
-    			$(".count").css( "display", "none" );
+    		if($(element).data('show-count') === "true" ){
+    			$(".count").css( "display", "inline-block" );
     		}
 	    	var htmlStr = '<ul class="sub-menu">';
 	    	$.each( sfApp.tags_list, function( index, tag ) {
