@@ -557,6 +557,7 @@
                 overflow: hidden;
                 position: relative;
                 border:solid 1px @gray-color;
+				background-color: @purple;
                 &.has-result{
                     display: table-cell;
                 }
@@ -571,14 +572,15 @@
                 span{
                     position: relative;
                     .sf-transition(0.3s);
-                    color: @content-color;
+                    color: @white;
                     z-index: 1;
                 }
                 &:hover{
-                    border-color: @main-color;
+                    border-color: @purple;
+					background-color: @white;
                     h4,
                     span{
-                        color: @main-color;
+                        color: @purple;
                     }
                 }
                 &.has-background{   

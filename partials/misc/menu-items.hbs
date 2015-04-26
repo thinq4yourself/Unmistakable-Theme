@@ -1,7 +1,7 @@
 {{!Begin Menu Item}}
 <li class="active">
 	<a href="{{@blog.url}}"> <!--Keep href="{{@blog.url}}" for home page-->
-		Home <!--Change text of menu here-->
+		Home 
 	</a>
 </li>
 {{!End Menu Item}}
@@ -9,15 +9,14 @@
 		{{>misc/menu-tags style="stack" max_items="15" show_count="false"}}
 {{!End Menu Item}}
 {{!Begin Menu Item}}
-<li class="has-children"> <!-- Add class="has-children" for multi level menu.-->
-	<a href="#"> <!--Change href: {{@blog.url}}/YOUR_STATIC_PAGE_URL_FROM_STEP_1/  Example: {{@blog.url}}/resume/-->
-		Unit Tests <!--Change text of menu here-->
+{{!Beging Unit Test Menu (not for PRODUCTION) }}
+<li class="has-children hide hidden"> {{! <!-- Add class="has-children" for multi level menu.--> }}
+	<a href="#"> {{! <!--Change href: {{@blog.url}}/YOUR_STATIC_PAGE_URL_FROM_STEP_1/  Example: {{@blog.url}}/resume/--> }}
+		Unit Tests
 	</a>
-	<!-- Begin level 2 menu-->
 	<ul class="sub-menu">				
-		<li class="has-children"> <!-- Add class="has-children" for multi level menu.-->
+		<li class="has-children"> {{! <!-- Add class="has-children" for multi level menu.--> }}
 			<a href="#">Page Layouts</a>
-			<!-- Begin level 3 menu-->
 			<ul class="sub-menu">
 				<li>
 					<a href="{{@blog.url}}/left-sidebar/">Left Sidebar</a>
@@ -32,11 +31,9 @@
 					<a href="{{@blog.url}}/full-width/">Full Width</a>
 				</li>
 			</ul>
-			<!-- End level 3 menu-->
 		</li>
-		<li class="has-children"> <!-- Add class="has-children" for multi level menu.-->
+		<li class="has-children"> {{! <!-- Add class="has-children" for multi level menu.--> }}
 			<a href="#">Post Formats</a>
-			<!-- Begin level 3 menu-->
 			<ul class="sub-menu">
 				<li>
 					<a href="{{@blog.url}}/which-is-the-best-bordeaux-or-burgundy/">Featured Post</a>
@@ -51,7 +48,6 @@
 					<a href="{{@blog.url}}/the-92m-x-ballet-brings-relaxed/">Audio Format</a>
 				</li>
 			</ul>
-	<!-- End level 3 menu-->
 		</li>
 		<li>
 			<a href="{{@blog.url}}/html-markup/">Html Markup</a>
@@ -66,14 +62,13 @@
 			<a href="{{@blog.url}}/9999/">404 Error</a>
 		</li>		
 	</ul>
-	<!-- End level 2 menu-->
 </li>
 {{!End Menu Item}}
 
 {{!Begin Menu Item}}
 <li class="has-children">
-	<a href="#"> <!--Change href: {{@blog.url}}/YOUR_STATIC_PAGE_URL_FROM_STEP_1/  Example: {{@blog.url}}/about/-->
-		About<!--Change text of menu here-->
+	<a href="#"> {{! <!--Change href: {{@blog.url}}/YOUR_STATIC_PAGE_URL_FROM_STEP_1/  Example: {{@blog.url}}/about/--> }}
+		About
 	</a>
 		<ul class="sub-menu">
 			<li >
@@ -101,7 +96,7 @@
 {{!Begin Menu Item}}
 <li>
 	<a href="{{@blog.url}}/contact/"> <!--Change href: {{@blog.url}}/YOUR_STATIC_PAGE_URL_FROM_STEP_1/  Example: {{@blog.url}}/contact/-->
-		Contact <!--Change text of menu here-->
+		Contact
 	</a>
 </li>
 {{!End Menu Item}}
