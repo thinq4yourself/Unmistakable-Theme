@@ -3016,6 +3016,7 @@ body[data-border-pattern="dashed"] .post-content .post-inner .post-meta {
   overflow: hidden;
   position: relative;
   border: solid 1px #bbbbbb;
+  background-color: #7f2569;
 }
 .post-content .content-area .next-prev-posts a.has-result {
   display: table-cell;
@@ -3038,15 +3039,16 @@ body[data-border-pattern="dashed"] .post-content .post-inner .post-meta {
   -moz-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  color: #20252b;
+  color: #ffffff;
   z-index: 1;
 }
 .post-content .content-area .next-prev-posts a:hover {
-  border-color: #0d98e1;
+  border-color: #7f2569;
+  background-color: #ffffff;
 }
 .post-content .content-area .next-prev-posts a:hover h4,
 .post-content .content-area .next-prev-posts a:hover span {
-  color: #0d98e1;
+  color: #7f2569;
 }
 .post-content .content-area .next-prev-posts a.has-background {
   border: none;
