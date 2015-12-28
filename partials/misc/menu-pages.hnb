@@ -1,0 +1,6 @@
+{{#if @blog.navigation}}
+	<li class="has-children sf-tags {{# if style}}{{style}}{{else}}stack{{/if}}">
+		<a href="#">Explore</a>
+        {{navigation}}
+	</li>
+{{/if}}

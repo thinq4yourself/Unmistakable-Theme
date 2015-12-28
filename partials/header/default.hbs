@@ -33,7 +33,7 @@
 					<div class="sf-search-container-inner">
 						<span class="arrow"></span>
 						<div class="search-container-wrap">
-							<input type="search" name="search-keyword" id="search-keyword" placeholder="Type and hit enter!"/>
+							<input type="search" name="search-keyword" id="search-keyword" placeholder="Type and hit enter."/>
 							<div class="search-result-wrap">
 								<div class="search-result-inner">
 									<ul class="search-result"></ul>
@@ -51,11 +51,7 @@
 			<div class="sf-nav-wrap">		
 				<span class="arrow"></span>
 				<ul class="sf-nav">
-					{{#if @blog.navigation}}
-						{{navigation}}
-					{{else}}
-						{{>misc/menu-items}}
-					{{/if}}
+					{{>misc/menu-items}}
 				</ul>
 			</div>
 		</div>
